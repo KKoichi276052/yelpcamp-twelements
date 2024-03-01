@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const CampgroundSchema = new mongoose.Schema({
   title: {
     type: String,
@@ -15,6 +15,9 @@ const CampgroundSchema = new mongoose.Schema({
   location: {
     type: String,
   },
+  image: {
+    type: String,
+  },
 });
 
-module.exports = mongoose.model('Campground', CampgroundSchema);
+module.exports = mongoose.model("Campground", CampgroundSchema);
