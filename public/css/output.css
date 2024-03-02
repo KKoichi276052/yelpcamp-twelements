@@ -1430,6 +1430,10 @@ html.dark{
   max-height: 15rem;
 }
 
+.max-h-\[500px\]{
+  max-height: 500px;
+}
+
 .min-h-\[1\.5rem\]{
   min-height: 1.5rem;
 }
@@ -2143,6 +2147,10 @@ html.dark{
   gap: 1rem;
 }
 
+.gap-2{
+  gap: 0.5rem;
+}
+
 .space-x-2 > :not([hidden]) ~ :not([hidden]){
   --tw-space-x-reverse: 0;
   margin-right: calc(0.5rem * var(--tw-space-x-reverse));
@@ -2366,6 +2374,10 @@ html.dark{
 
 .border-\[1px\]{
   border-width: 1px;
+}
+
+.border-2{
+  border-width: 2px;
 }
 
 .border-x-0{
@@ -2969,6 +2981,10 @@ html.dark{
 
 .pt-\[6px\]{
   padding-top: 6px;
+}
+
+.pb-\[6px\]{
+  padding-bottom: 6px;
 }
 
 .text-left{
@@ -3910,6 +3926,11 @@ html.dark{
   border-radius: 50%;
 }
 
+.hover\:border-primary-600:hover{
+  --tw-border-opacity: 1;
+  border-color: rgb(48 97 175 / var(--tw-border-opacity));
+}
+
 .hover\:\!bg-\[\#eee\]:hover{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(238 238 238 / var(--tw-bg-opacity)) !important;
@@ -3950,6 +3971,15 @@ html.dark{
 .hover\:bg-primary-accent-100:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(217 228 243 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-neutral-500:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(115 115 115 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-opacity-10:hover{
+  --tw-bg-opacity: 0.1;
 }
 
 .hover\:fill-\[\#8b8b8b\]:hover{
@@ -4070,6 +4100,11 @@ html.dark{
 .focus\:border-primary:focus{
   --tw-border-opacity: 1;
   border-color: rgb(59 113 202 / var(--tw-border-opacity));
+}
+
+.focus\:border-primary-600:focus{
+  --tw-border-opacity: 1;
+  border-color: rgb(48 97 175 / var(--tw-border-opacity));
 }
 
 .focus\:\!bg-\[\#eee\]:focus{
@@ -4351,6 +4386,11 @@ html.dark{
 .checked\:focus\:after\:bg-transparent:focus:checked::after{
   content: var(--tw-content);
   background-color: transparent;
+}
+
+.active\:border-primary-700:active{
+  --tw-border-opacity: 1;
+  border-color: rgb(40 81 146 / var(--tw-border-opacity));
 }
 
 .active\:bg-\[\#c4d4ef\]:active{
@@ -5181,6 +5221,15 @@ html.dark{
 
 :is(.dark .dark\:hover\:bg-white\/10:hover){
   background-color: rgb(255 255 255 / 0.1);
+}
+
+:is(.dark .dark\:hover\:bg-neutral-100:hover){
+  --tw-bg-opacity: 1;
+  background-color: rgb(245 245 245 / var(--tw-bg-opacity));
+}
+
+:is(.dark .dark\:hover\:bg-opacity-10:hover){
+  --tw-bg-opacity: 0.1;
 }
 
 :is(.dark .dark\:hover\:fill-gray-100:hover){
