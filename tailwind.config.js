@@ -8,12 +8,12 @@ module.exports = {
   content: [
     "./public/**/*.{js,css}",
     "./views/**/*.ejs",
-    "./node_modules/tw-elements/dist/js/**/*.js",
+    // "./node_modules/tw-elements/dist/js/**/*.js",
     "node_modules/preline/dist/*.js",
   ],
   darkMode: "class",
   plugins: [
-    require("tw-elements/dist/plugin.cjs"),
+    // require("tw-elements/dist/plugin.cjs"),
     require("taos/plugin"),
     require("preline/plugin"),
   ],
