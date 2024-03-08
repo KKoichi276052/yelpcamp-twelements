@@ -1,10 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: {
-    relative: true,
-    transform: (content) => content.replace(/taos:/g, ""),
-    files: ["./src/*.{html,js}"],
-  },
+  // content: {
+  //   relative: true,
+  //   transform: (content) => content.replace(/taos:/g, ""),
+  //   files: ["./src/*.{html,js}"],
+  // },
   content: [
     "./public/**/*.{js,css}",
     "./views/**/*.ejs",

@@ -14,12 +14,12 @@
     ></script> -->
     <!-- <script src="https://unpkg.com/taos@1.0.5/dist/taos.js"></script> -->
     <script src="/taos/dist/taos.js" defer></script>
-    <script src="./node_modules/preline/dist/preline.js" defer></script>
+    <script src="/preline/dist/preline.js" defer></script>
     <title>Boilerplate</title>
   </head>
-  <body class="min-h-screen flex flex-col">
+  <body class="min-h-screen flex flex-col bg-slate-50">
     <%- include('../partials/navbar') %>
-    <main class="my-8 container mx-auto"><%- body %></main>
+    <main class="my-8 container mx-auto max-w-[85rem]"><%- body %></main>
     <%- include('../partials/footer') %>
   </body>
 </html>
