@@ -5,7 +5,7 @@ const path = require("path");
 const port = 3000;
 const ejsMate = require("ejs-mate");
 const mongoose = require("mongoose");
-const catchAynsc = require("./utils/CatchAsync");
+const catchAsync = require("./utils/CatchAsync");
 const Campground = require("./models/campground");
 const methodOverride = require("method-override");
 // const morgan = require("morgan");
@@ -43,7 +43,7 @@ app.get("/", (req, res) => {
 
 app.get(
   "/campgrounds",
-  catchAynsc(async (req, res) => {
+  catchAsync(async (req, res) => {
     const campgrounds = await Campground.find({});
     res.render("campgrounds/index", { campgrounds });
   })
@@ -64,7 +64,7 @@ app.post(
 
 app.get(
   "/campgrounds/:id",
-  catchAynsc(async (req, res) => {
+  catchAsync(async (req, res) => {
     const campground = await Campground.findById(req.params.id);
     res.render("campgrounds/show", { campground });
   })
@@ -72,7 +72,7 @@ app.get(
 
 app.get(
   "/campgrounds/:id/edit",
-  catchAynsc(async (req, res) => {
+  catchAsync(async (req, res) => {
     const campground = await Campground.findById(req.params.id);
     res.render("campgrounds/edit", { campground });
   })
@@ -80,7 +80,7 @@ app.get(
 
 app.put(
   "/campgrounds/:id",
-  catchAynsc(async (req, res) => {
+  catchAsync(async (req, res) => {
     const { id } = req.params;
     const campground = await Campground.findByIdAndUpdate(id, {
       ...req.body.campground,
@@ -92,7 +92,7 @@ app.put(
 
 app.delete(
   "/campgrounds/:id",
-  catchAynsc(async (req, res) => {
+  catchAsync(async (req, res) => {
     const { id } = req.params;
     await Campground.findByIdAndDelete(id);
     res.redirect("/campgrounds");
