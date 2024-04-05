@@ -5,7 +5,7 @@
   <div
     class="mx-auto max-w-lg rounded-lg bg-white p-6 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 mt-5"
   >
-    <form class="">
+    <form class="" novalidate>
       <div class="relative">
         <input
           type="text"
@@ -14,6 +14,7 @@
           placeholder=""
           value="<%= campground.title %>"
           name="campground[title]"
+          required
         />
         <label
           for="title"
@@ -52,21 +53,7 @@
           >Image URL</label
         >
       </div>
-      <!-- <div class="relative mt-5">
-        <input
-          type="number"
-          id="price"
-          class="peer py-4 px-0 block w-full bg-transparent border-t-transparent border-b-2 border-x-transparent border-b-gray-200 text-sm placeholder:text-transparent focus:border-t-transparent focus:border-x-transparent focus:border-b-blue-500 focus:ring-0 disabled:opacity-50 disabled:pointer-events-none dark:border-b-gray-700 dark:text-gray-400 dark:focus:ring-gray-600 dark:focus:border-b-gray-600 focus:pt-6 focus:pb-2 [&:not(:placeholder-shown)]:pt-6 [&:not(:placeholder-shown)]:pb-2 autofill:pt-6 autofill:pb-2"
-          placeholder=""
-          value="<%= campground.price %>"
-          name="campground[price]"
-        />
-        <label
-          for="price"
-          class="absolute top-0 start-0 py-4 px-0 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent dark:text-white peer-disabled:opacity-50 peer-disabled:pointer-events-none peer-focus:text-xs peer-focus:-translate-y-1.5 peer-focus:text-gray-500 peer-[:not(:placeholder-shown)]:text-xs peer-[:not(:placeholder-shown)]:-translate-y-1.5 peer-[:not(:placeholder-shown)]:text-gray-500"
-          >Price</label
-        >
-      </div> -->
+
       <div class="mt-4">
         <label
           for="price"
@@ -102,6 +89,49 @@
           class="absolute top-0 start-0 py-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent dark:text-white peer-disabled:opacity-50 peer-disabled:pointer-events-none peer-focus:text-xs peer-focus:-translate-y-1.5 peer-focus:text-gray-500 peer-[:not(:placeholder-shown)]:text-xs peer-[:not(:placeholder-shown)]:-translate-y-1.5 peer-[:not(:placeholder-shown)]:text-gray-500"
           >Description</label
         >
+      </div>
+      <div>
+        <label
+          for="hs-validation-name-error"
+          class="block text-sm font-medium mb-2 dark:text-white"
+          >Email</label
+        >
+        <div class="relative">
+          <input
+            type="text"
+            id="hs-validation-name-error"
+            name="hs-validation-name-error"
+            class="py-3 px-4 block w-full border-red-500 rounded-lg text-sm focus:border-red-500 focus:ring-red-500 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400"
+            required
+            aria-describedby="hs-validation-name-error-helper"
+          />
+          <div
+            class="absolute inset-y-0 end-0 flex items-center pointer-events-none pe-3"
+          >
+            <svg
+              class="flex-shrink-0 size-4 text-red-500"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="10" />
+              <line x1="12" x2="12" y1="8" y2="12" />
+              <line x1="12" x2="12.01" y1="16" y2="16" />
+            </svg>
+          </div>
+        </div>
+        <p
+          class="text-sm text-red-600 mt-2"
+          id="hs-validation-name-error-helper"
+        >
+          Please enter a valid email address.
+        </p>
       </div>
 
       <!--Submit button-->

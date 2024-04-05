@@ -16,6 +16,7 @@ module.exports = {
     // require("tw-elements/dist/plugin.cjs"),
     require("taos/plugin"),
     require("preline/plugin"),
+    require("@tailwindcss/forms"),
   ],
   safelist: [
     "!duration-[0ms]",
